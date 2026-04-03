@@ -32,9 +32,9 @@ export class UpdateComponent implements OnInit{
 
   
 
-  getStudentById(sid:string) {
-    const id = Number(sid);
-    const stud = this.studentList.find(s=>s.sid===id);
+  getStudentById(id:string) {
+    const cid = Number(id);
+    const stud = this.studentList.find(s=>s.id===cid);
     if(stud) {
       this.updateStud = stud
       console.log(this.studentList)
@@ -47,7 +47,7 @@ export class UpdateComponent implements OnInit{
 
   updateStudent() {
     const stud = this.studentForm.value; //fetching the object 'student' from the update Form
-    const id = this.studentList.findIndex(s => s.sid === stud.sid); //fixing the sid 
+    const id = this.studentList.findIndex(s => s.id === stud.id); //fixing the sid 
     this.studentList[id] = ({...stud})
     console.log(this.studentList)
     this.router.navigate(['/list'])

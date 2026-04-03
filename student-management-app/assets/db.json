@@ -1,0 +1,19 @@
+{
+    "students":[
+        {
+            "id":1,
+            "sname":"Anurag",
+            "course":"Full-Stack-Developer"
+        },
+        {
+            "id":2,
+            "sname":"Khushboo",
+            "course":"cloud-computing"
+        },
+        {
+            "id":3,
+            "sname":"Chiiiiivayaa",
+            "course":"Bakwaas"
+        }
+    ]
+}

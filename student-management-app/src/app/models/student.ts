@@ -1,10 +1,10 @@
 export class Student {
-    sid!:number
+    id!:number
     sname!:string
     course!:string
 
-    constructor(sid?: number, sname?: string, course?: string) {
-    if (sid !== undefined) this.sid = sid;
+    constructor(id?: number, sname?: string, course?: string) {
+    if (id !== undefined) this.id = id;
     if (sname !== undefined) this.sname = sname;
     if (course !== undefined) this.course = course;
   }

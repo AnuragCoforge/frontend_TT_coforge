@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Student } from '../../models/student';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from "@angular/router";
+import { StudentService } from '../../services/student.service';
 
 @Component({
   selector: 'app-list',
@@ -9,17 +10,22 @@ import { RouterLink } from "@angular/router";
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
-export class ListComponent {
-  studentList:Student[] = [new Student(123, "Anurag", "Java"),
-  new Student(124, "Uttu", "C++"),
-  new Student(125, "Mayank", "C++"),
-  new Student(126, "Sagar", "Python")]
+export class ListComponent implements OnInit{
 
+  studentList:Student[] = []
+
+  constructor(private service:StudentService) {}
+
+    ngOnInit(): void {
+    this.service.getAllStudents()
+    .subscribe((data)=> {console.log(data)
+    this.studentList=data})
+  }
 
    
 deleteStudent(id:number){
-const sid=Number(id)
-this.studentList=this.studentList.filter(s=>s.sid!=id)
+// const sid=Number(id)
+// this.studentList=this.studentList.filter(s=>s.id!=id)
 }
  
 }

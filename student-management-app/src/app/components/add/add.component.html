@@ -3,17 +3,17 @@
         <div>
         <label class="form-label">Student Id:</label>
         <input type = "number"
-                name = "sid"
-                [(ngModel)]="student.sid" 
-                #sid = "ngModel"
+                name = "id"
+                [(ngModel)]="student.id" 
+                #id = "ngModel"
                 required
                 min="1"
                 class="form-control"
                 >
                 <!-- Form - VALIDATION -->
-                <div *ngIf="sid.invalid && sid.touched">
-                    <small *ngIf="sid.errors?.['required']">Sid is required</small>
-                    <small *ngIf="sid.errors?.['min']">Sid must be more than 0</small>
+                <div *ngIf="id.invalid && id.touched">
+                    <small *ngIf="id.errors?.['required']">Sid is required</small>
+                    <small *ngIf="id.errors?.['min']">Sid must be more than 0</small>
                 </div>
     </div>
     <div>
@@ -53,5 +53,5 @@
 </form>
 
 <div>
-    <h3 *ngFor="let student of studentList">{{student.sid}}--------{{student.sname}}----------{{student.course}}</h3>
+    <h3 *ngFor="let student of studentList">{{student.id}}--------{{student.sname}}----------{{student.course}}</h3>
 </div>

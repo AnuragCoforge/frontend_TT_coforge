@@ -6,12 +6,12 @@
           <th>Course</th>
         </tr>
         <tr *ngFor="let s of studentList">
-          <td>{{s.sid}}</td>
+          <td>{{s.id}}</td>
           <td>{{s.sname}}</td>
           <td>{{s.course}}</td>
           <td>
             <button type="button" class="btn btn-success" routerLink="/edit">Update Student</button>
-            <button type="button" class="btn btn-danger" (click)="deleteStudent(s.sid)">Delete Student</button>
+            <button type="button" class="btn btn-danger" (click)="deleteStudent(s.id)">Delete Student</button>
 
           </td>
         </tr>
