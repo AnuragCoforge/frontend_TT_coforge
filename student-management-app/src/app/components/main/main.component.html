@@ -1,0 +1,24 @@
+<div>
+    <h1 class="text-center">Login Page</h1>
+ 
+   <form>
+  <div class="mb-3">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" 
+        name="username"
+        [(ngModel)] ="username"
+    >
+  <div class="mb-3">
+    <label for="pwd">Password</label>
+    <input type="password" class="form-control" id="pwd"
+        name="password"
+        [(ngModel)]="password"
+    >
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+  </div>
+</form>
+</div>
+<p>{{username}}</p>
+<p>{{password}}</p>
+ 

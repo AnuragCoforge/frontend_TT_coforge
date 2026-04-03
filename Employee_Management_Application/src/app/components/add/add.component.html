@@ -1,0 +1,75 @@
+<form #employeeForm = ngForm (ngSubmit)="addEmployee()">
+    <div>
+        <div>
+        <label class="form-label">Employee Id:</label>
+        <input type = "number"
+                name = "empid"
+                [(ngModel)]="employee.empid" 
+                #empid = "ngModel"
+                required
+                min="1"
+                class="form-control"
+                >
+                <!-- Form - VALIDATION -->
+                <div *ngIf="empid.invalid && empid.touched">
+                    <small *ngIf="empid.errors?.['required']">employee id is required</small>
+                    <small *ngIf="empid.errors?.['min']">employee id must be more than 0</small>
+                </div>
+    </div>
+    <div>
+        <label class="form-label">Employee Name:</label>
+        <input type="text" name="sname"
+                [(ngModel)]="employee.empname"
+                #empname = "ngModel"
+                required
+                minlength="3"
+                class="form-control"
+                >
+                <div *ngIf="empname.invalid && empname.touched">
+                    <small *ngIf="empname.errors?.['required']">Employee name is required</small>
+                    <small *ngIf="empname.errors?.['minlength']">Employee name should be minlegth = 3</small>
+                </div>
+    </div>
+
+    <div>
+        <label class="form-label">Technology:</label>
+        <input type="text" name="emptech"
+                [(ngModel)]="employee.emptech"
+                #emptech = "ngModel"
+                required
+                class="form-control"
+                >
+                <div *ngIf="emptech.invalid && emptech.touched">
+                    <small *ngIf="emptech.errors?.['required']">Technology field is required</small>
+                </div>
+    </div>
+
+    <div>
+        <label class="form-label">Phone No:</label>
+        <input type="text" name="empphone"
+                [(ngModel)]="employee.empphone"
+                #empphone = "ngModel"
+                required
+                maxlength="10"
+                class="form-control"
+                >
+                <div *ngIf="empphone.invalid && empphone.touched">
+                    <small *ngIf="empphone.errors?.['required']">Phone Number  is required</small>
+                    <small *ngIf="empphone.errors?.['minlength']">Phone number  should be minlegth = 10</small>
+                </div>
+    </div>
+
+    <br>
+
+    <div class="d-flex gap-3">
+        <button class="btn btn-success" type="submit" [disabled]="employeeForm.invalid">Add Student</button>
+        <button class="btn btn-warning cursor:pointer" routerLink="/update">Update Employee</button>
+    </div>
+    </div>
+
+    
+</form>
+
+<div>
+    <h3 *ngFor="let emp of employeeList">{{emp.empid}}--------{{emp.empname}}----------{{emp.emptech}}------------{{emp.empphone}}</h3>
+</div>

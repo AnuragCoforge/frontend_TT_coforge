@@ -1,0 +1,49 @@
+<div class="container-fluid mt-3">
+
+  <div>
+    <app-header></app-header>
+  </div>
+
+  <div>
+    <!-- <app-main></app-main> -->
+    <!-- <app-main *ngIf="showLogin; else logoutblock"></app-main>
+      <ng-template #logoutblock>
+        <app-logout></app-logout>
+      </ng-template>
+      <button (click)="logoutFxButton()">LOGOUT BUTTON</button> -->
+
+      <!-- <app-directives></app-directives>-->
+
+      <!-- <ul>
+        <li *ngFor="let name of names">{{name}}</li>
+      </ul> -->
+
+      <!-- <table>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Course</th>
+        </tr>
+        <tr *ngFor="let s of student">
+          <td>{{s.id}}</td>
+          <td>{{s.name}}</td>
+          <td>{{s.course}}</td>
+        </tr>
+      </table> -->
+      <!-- <app-list></app-list> -->
+
+      <!-- <app-add></app-add> -->
+       <!-- <app-update></app-update> -->
+        <!-- <app-home></app-home> -->
+        <router-outlet></router-outlet>
+  </div>
+
+
+  <div class="row bg-dark">
+    <h3 class="text-light">
+      <app-footer></app-footer>
+    </h3>
+  </div>
+
+
+</div>

@@ -1,0 +1,34 @@
+<div class="d-flex flex-column gap-3">
+<div class="d-flex justify-content-center align-items-center gap-5">
+    <button class="btn btn-primary cursor:pointer" routerLink="/add">Add Employee</button>
+    <button class="btn btn-warning cursor:pointer" routerLink="/update">Update Employee</button>
+</div>
+  <table class="table table-striped">
+    <thead class="table-dark text white">
+      <tr>
+        <th scope="col">Employee Id</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Technology</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let emp of employeeList">
+        <td>{{ emp.empid }}</td>
+        <td>{{ emp.empname }}</td>
+        <td>{{ emp.emptech }}</td>
+        <td>{{ emp.empphone }}</td>
+        <td>
+          <div class="d-flex gap-3">
+            <button class="btn btn-success" routerLink="/edit">Edit</button>
+            <button class="btn btn-danger" (click)="deleteEmployee(emp.empid)">
+              Delete
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

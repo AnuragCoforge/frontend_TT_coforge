@@ -1,0 +1,13 @@
+<div>
+    {{myname}}
+    <button class="btn btn-primary" (click)="addUser()">add the user</button>
+    <h1>User List</h1>
+    <br>
+    <div *ngFor="let user of userList">
+        <h3>uid:{{user.uid}}</h3>
+        <h3>{{user.uname}}</h3>
+        <h3>email:{{user.email}}</h3>
+        <h3>role:{{user.role}}</h3>
+        <br>
+    </div>
+</div>

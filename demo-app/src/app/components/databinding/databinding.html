@@ -1,0 +1,34 @@
+<div>
+    <h1 [style.color]=color>{{name}} from  databinding</h1>
+    <button class="btn btn-primary" [disabled]=isActive> click here </button>
+    <!-- <img [src]=imageUrl alt="cannot fetch the image"> -->
+     <table [border] = customBorder [style.color] = tblFontColor>
+
+        <tr>
+            <th>Name</th>
+            <th>Phone number</th>
+            <th>Location</th>
+        </tr>
+            <td>Anurag</td>
+            <td>6393743886</td>
+            <td>Hyderabad</td>
+     </table>
+</div>
+
+<br><br>
+<h1>Event Binding Tutorial</h1>
+<hr>
+<br><br>
+<div>
+    <h1 [style.color]=textColor>Event Binding Coloring</h1>
+    <button (click) = "changeColor()" class="btn btn-primary"> click the button to change color</button>
+</div>
+<br><br>
+<hr>
+<div>
+    <u><h1>CounterApp</h1></u>
+    <h1>counter: {{value}}</h1>
+    <button (click) = "inc()" class="btn btn-success">increment</button>
+    &nbsp; &nbsp; &nbsp; 
+    <button (click) = "dec()" class="btn btn-warning">decrement</button>
+</div>
