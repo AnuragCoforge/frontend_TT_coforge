@@ -3,6 +3,7 @@ import { MainComponent } from './components/main/main.component';
 import { UpdateComponent } from './components/update/update.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListComponent } from './components/list/list.component';
+import { InfoComponent } from './components/info/info.component';
 
 export const routes: Routes = [
     {
@@ -28,5 +29,9 @@ export const routes: Routes = [
     {
         path:'list',
         component: ListComponent
+    },
+    {
+        path:'info/:id',
+        component: InfoComponent
     }
 ];

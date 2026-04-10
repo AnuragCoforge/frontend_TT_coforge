@@ -3,6 +3,7 @@ import { Student } from '../../models/student';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, ɵInternalFormsSharedModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { StudentService } from '../../services/student.service';
 
 @Component({
   selector: 'app-update',
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class UpdateComponent implements OnInit{
 
-  constructor(private fb:FormBuilder, private router:Router){}
+  constructor(private fb:FormBuilder, private router:Router, private service:StudentService){}
   updateStud!:Student
   studentForm!:FormGroup
   studentList:Student[] = [
@@ -28,13 +29,16 @@ export class UpdateComponent implements OnInit{
       sname:['', [Validators.required,Validators.minLength(3)]],
       course:['', Validators.required]
     })
+    this.id = Number(this.router.snapshot.paramMap.get("id"));
+    this.service.getStudentById(this.id).subs
   }
 
   
 
-  getStudentById(id:string) {
-    const cid = Number(id);
-    const stud = this.studentList.find(s=>s.id===cid);
+  getStudentById(sid:string) {
+    const id = Number(sid);
+    let stud:Student;
+    const stud = this.service.getStudentById(id)
     if(stud) {
       this.updateStud = stud
       console.log(this.studentList)

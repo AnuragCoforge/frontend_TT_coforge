@@ -1,0 +1,47 @@
+{
+  "student": [
+    {
+      "sid": 0,
+      "name": "Khushboo Pandey",
+      "phone": "8675445377",
+      "id": "A5vEN8tm7g0"
+    },
+    {
+      "sid": 1,
+      "name": "Shivaya",
+      "phone": "9696969696",
+      "id": "oOMqEhi11FE"
+    },
+    {
+      "sid": 2,
+      "name": "Anurag",
+      "phone": "6969696969",
+      "id": "_WCbsgz80rQ"
+    },
+    {
+      "sid": 3,
+      "name": "Rajat",
+      "phone": "9616166131",
+      "id": "gNCGKC_eSdE"
+    },
+    {
+      "sid": 4,
+      "name": "Narendra",
+      "phone": "8736645376",
+      "id": "SiBxpW4vI1Y"
+    },
+    {
+      "sid": "12",
+      "name": "sdvfs",
+      "phone": "321414124",
+      "id": "S5ZjXuefq-Q"
+    },
+    {
+      "sid": "132",
+      "name": "fdds",
+      "phone": "2132131231",
+      "id": "6R2RZjg9ySM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

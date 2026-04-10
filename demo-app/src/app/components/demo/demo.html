@@ -1,0 +1,25 @@
+<div>
+    <h1>{{name| uppercase}}</h1>
+    <h1>{{name | lowercase}}</h1>
+    <h1>{{name | titlecase}}</h1>
+    <h1>{{date | date:'short'}}</h1>
+    <h1>{{date | date:'fullDate'}}</h1>
+    <h1>{{date | date:'dd-MM-yyyy'}}</h1>
+    <h2>Time: {{date | date:'hh:mm:ss a'}}</h2>
+    <h3>Amount: {{amount | currency}}</h3>
+    <h3>Amount: {{amount | currency:'INR'}}</h3>
+    <h4>Discount: {{discount | percent}}</h4>
+    <h4>Decimal: {{decimalValue | number:'4.2-4'}}</h4>
+    <h4>slicing Tutorials: {{data | slice: 1:7}}</h4>
+    <h3>student object: {{student}}</h3>
+    <h3>student object in json format: {{student | json}}</h3>
+
+    <h3 *ngFor="let s of student | keyvalue">
+        <!-- {{s.id}}--------{{s.sname}}-----------{{s.course}} -->
+         {{s.key |json}}-------{{s.value | json}}
+    </h3>
+
+    <h3>square of a number (custom pipe): {{num | square}}</h3>
+    <h1>name length (custome pipe): {{myname | length}}</h1>
+    <h3>{{user | salutation}}</h3>
+</div>

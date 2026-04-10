@@ -1,0 +1,21 @@
+<div>
+    <form [formGroup]="addStudent" (ngSubmit)="saveData()">
+  <div class="form-group">
+    <label>sid</label>
+    <input type="text" class="form-control" placeholder="Enter name" formControlName="sid" >
+  </div>
+
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" placeholder="Enter name" formControlName="name">
+  </div>
+
+  <div class="form-group">
+    <label>Phone</label>
+    <input type="text" class="form-control" placeholder="Enter name" formControlName="phone">
+  </div>
+  
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>

@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center align-items-center gap-4 mt-5">
+    <div>
+        <h1>List Of Students</h1>
+    </div>
+    <div class="shadow rounded-lg  ">
+    <table class="table">
+        <thead>
+            <tr class="table table-dark">
+                <th scope="col">Id</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Phone No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of studentData">
+                <td scope="row">{{item.sid}}</td>
+                <td scope="row">{{item.name}}</td>
+                <td scope="row">{{item.phone}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</div>
+

@@ -13,4 +13,10 @@ export class StudentService {
   getAllStudents():Observable<any> { //the method which is calling this the return type is observable..........
     return this.http.get(baseurl)
   }
+  addStudent(student:Student):Observable<Student | any> {
+    return this.http.post(baseurl, student)
+  }
+  getStudentById(id:number):Observable<Student | any> {
+    return this.http.get(baseurl+"/"+id);
+  }
 }
